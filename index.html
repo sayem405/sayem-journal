@@ -1,323 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M A Sayem - Mobile Team Lead & Senior Android Developer</title>
+    <title>M. A. Sayem - Mobile Team Lead & Senior Android Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
+            background-color: #111827; /* Dark Gray */
+            color: #E5E7EB; /* Light Gray */
         }
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .section-title {
+            @apply text-3xl font-bold text-cyan-400 mb-8 tracking-wide relative pb-2;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5em;
-            font-weight: 600;
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #22d3ee; /* Cyan-400 */
         }
-        h1 {
-            font-size: 2.2em;
+        .card {
+            @apply bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300;
         }
-        h2 {
-            font-size: 1.8em;
+        .tag {
+            @apply inline-block bg-gray-700 text-cyan-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-1 rounded-full;
         }
-        h3 {
-            font-size: 1.4em;
-        }
-        p {
-            margin-bottom: 1em;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #217dbb;
-        }
-        hr {
-            border: 0;
-            border-top: 1px solid #ddd;
-            margin: 20px 0;
-        }
-        ul, ol {
-            margin-bottom: 1em;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        ol {
-            list-style-type: decimal;
-            padding-left: 20px;
-        }
-        strong {
-            font-weight: 600;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .contact-info {
-            font-size: 1em;
-            margin-bottom: 1em;
-        }
-        .contact-info a {
-            margin-right: 10px;
-        }
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 1em;
-        }
-        .skill-list span {
-            background-color: #e0e0e0;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-        .project-item {
-            margin-bottom: 20px;
-        }
-        .project-item h4 {
-            font-size: 1.1em;
-            margin-bottom: 0.5em;
-        }
-        .project-item p {
-            font-size: 0.95em;
-            margin-bottom: 0.5em;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            .skill-list span {
-                font-size: 0.8em;
-                padding: 5px 8px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.6em;
-            }
-            h3 {
-                font-size: 1.2em;
-            }
-        }
-
-        .skill-group {
-            margin-bottom: 1.5em;
-        }
-
-        .skill-group h4 {
-            font-size: 1em;
-            margin-bottom: 0.5em;
-            color: #34495e;
-            font-weight: 500;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #1f2937; /* Gray-800 */
+            border: 4px solid #22d3ee; /* Cyan-400 */
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>M A Sayem</h1>
-            <div class="contact-info">
-                <span>Dhaka, Bangladesh</span> |
-                <a href="https://www.linkedin.com/in/sayem405" target="_blank">LinkedIn</a> |
-                <a href="https://stackoverflow.com/users/1263362/sayem" target="_blank">Stack Overflow</a>
-            </div>
-            <hr>
-        </header>
+<body class="antialiased">
 
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <p>
-                Passionate Mobile Team Lead and Senior Android Developer with over 11 years of experience in mobile application development. Expertise in architecting scalable Android solutions, clean code practices, and modern Android frameworks. Skilled in handling international teams and ensuring seamless communication across different time zones. Proficient in Kotlin, Java, and .NET, with experience in API development, modularized app architectures, and advanced dependency injection techniques. Adept at mentoring junior developers and leading high-performance teams to deliver innovative mobile solutions.
-            </p>
-        </section>
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">M. A. Sayem</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#summary" class="text-gray-300 hover:text-cyan-400 transition-colors">Summary</a>
+                <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#experience" class="text-gray-300 hover:text-cyan-400 transition-colors">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#education" class="text-gray-300 hover:text-cyan-400 transition-colors">Education</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#summary" class="block py-2 text-gray-300 hover:text-cyan-400">Summary</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-cyan-400">Skills</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-cyan-400">Experience</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-cyan-400">Projects</a>
+            <a href="#education" class="block py-2 text-gray-300 hover:text-cyan-400">Education</a>
+        </div>
+    </header>
 
-        <section class="section">
-            <h2>Technical Skills</h2>
-            <div class="skill-group">
-                <h4>Programming Languages</h4>
-                <div class="skill-list">
-                    <span>Kotlin</span>
-                    <span>Java</span>
-                    <span>C#</span>
-                    <span>ASP.NET</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h4>Mobile Development</h4>
-                <div class="skill-list">
-                    <span>Android Development</span>
-                    <span>Jetpack Compose</span>
-                    <span>MVVM</span>
-                    <span>MVP</span>
-                    <span>Clean Architecture</span>
-                    <span>Software Design Patterns</span>
-                    <span>Dependency Injection (Hilt, Dagger)</span>
-                    <span>Modularized App Architecture</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h4>Backend Development</h4>
-                <div class="skill-list">
-                    <span>RESTful API</span>
-                    <span>SQLite</span>
-                    <span>MySQL</span>
-                    <span>Firebase</span>
-                    <span>Couchbase</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h4>Web Services</h4>
-                <div class="skill-list">
-                    <span>RESTful</span>
-                    <span>SOAP</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h4>Version Control</h4>
-                <div class="skill-list">
-                    <span>Git</span>
-                    <span>SVN</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h4>Tools & Management Systems</h4>
-                <div class="skill-list">
-                    <span>Android Studio</span>
-                    <span>Eclipse</span>
-                    <span>CodeBlocks</span>
-                    <span>Redmine</span>
-                    <span>QAComplete</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h4>3rd Party Libraries & Frameworks</h4>
-                <div class="skill-list">
-                    <span>Retrofit</span>
-                    <span>Volley</span>
-                    <span>Butter Knife</span>
-                    <span>Glide</span>
-                    <span>Room</span>
-                    <span>Coroutine</span>
-                    <span>Data Binding</span>
-                    <span>Fastlane</span>
-                    <span>Jetpack Libraries</span>
-                    <span>Compose</span>
-                    <span>Invision</span>
-                    <span>Draw.io</span>
-                </div>
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-20">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">M. A. Sayem</h1>
+            <p class="text-xl md:text-2xl text-cyan-400 mt-4">Mobile Team Lead & Senior Android Developer</p>
+            <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Dhaka, Bangladesh</p>
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/masayem/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                    <i data-lucide="linkedin" class="w-8 h-8"></i>
+                </a>
+                <a href="https://stackoverflow.com/users/3362269/m-a-sayem" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.922 20.71c.522 0 .934.412.934.934v1.422H3.21V22.07c0-.522.412-.934.934-.934h14.778zM7.823 19.844l9.336 2.023.412-1.85-9.336-2.023-.412 1.85zm1.237-4.52l8.47 4.118.823-1.645-8.47-4.118-.823 1.645zm2.47-4.438l6.88 6.055 1.237-1.422-6.88-6.055-1.237 1.422zm4.117-3.934l4.52 7.74 1.645-.822-4.52-7.74-1.645.822zM19.334 3.21H18.51l-1.85 11.19 1.85.412L20.364 3.21h-1.03zM7.21 20.71h10.3v-1.85h-10.3v1.85z"/></svg>
+                </a>
+                <a href="https://github.com/masayem" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                    <i data-lucide="github" class="w-8 h-8"></i>
+                </a>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <h3>Mobile Team Lead</h3>
-                <p><em>M2SYS Technology, Dhaka, Bangladesh (January 2025 – Present)</em></p>
-                <ul>
-                    <li>Leading international teams (Android & iOS), ensuring effective task distribution and on-time delivery.</li>
-                    <li>Managing inter-team communication, technical guidance, and project architecture planning.</li>
-                    <li>Driving the adoption of modularized app structures for better maintainability.</li>
+        <!-- Professional Summary -->
+        <section id="summary" class="py-16">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="card">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Passionate Mobile Team Lead and Senior Android Developer with over 11 years of experience in mobile application development. Expertise in architecting scalable Android solutions, clean code practices, and modern Android frameworks. Skilled in handling international teams and ensuring seamless communication across different time zones. Proficient in Kotlin, Java, and .NET, with experience in API development, modularized app architectures, and advanced dependency injection techniques. Adept at mentoring junior developers and leading high-performance teams to deliver innovative mobile solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="skills" class="py-16">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="code" class="mr-2 text-cyan-400"></i>Programming Languages</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">ASP.NET</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="smartphone" class="mr-2 text-cyan-400"></i>Mobile Development</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag">Android Development</span>
+                        <span class="tag">Jetpack Compose</span>
+                        <span class="tag">MVVM / MVP</span>
+                        <span class="tag">Clean Architecture</span>
+                        <span class="tag">Modularized Apps</span>
+                        <span class="tag">Dagger & Hilt</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="database" class="mr-2 text-cyan-400"></i>Backend & Databases</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag">RESTful API</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Couchbase</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="cloud-cog" class="mr-2 text-cyan-400"></i>Web Services</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag">RESTful</span>
+                        <span class="tag">SOAP</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="git-branch" class="mr-2 text-cyan-400"></i>Version Control</h3>
+                     <div class="flex flex-wrap">
+                        <span class="tag">Git</span>
+                        <span class="tag">SVN</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="wrench" class="mr-2 text-cyan-400"></i>Tools & Frameworks</h3>
+                     <div class="flex flex-wrap">
+                        <span class="tag">Retrofit</span>
+                        <span class="tag">Glide</span>
+                        <span class="tag">Room</span>
+                        <span class="tag">Coroutine</span>
+                        <span class="tag">Jetpack Libraries</span>
+                        <span class="tag">Fastlane</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience" class="py-16">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="relative border-l-2 border-gray-700 ml-5">
+                <!-- M2SYS -->
+                <div class="mb-10 ml-10 timeline-item">
+                    <span class="absolute -left-1.5 flex items-center justify-center w-3 h-3 bg-cyan-400 rounded-full ring-8 ring-gray-900"></span>
+                    <h3 class="text-xl font-semibold text-white">Mobile Team Lead</h3>
+                    <p class="text-md font-medium text-cyan-400">M2SYS Technology, Dhaka</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">January 2025 – Present</time>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Leading international Android & iOS teams.</li>
+                        <li>Managing inter-team communication and project architecture.</li>
+                        <li>Driving adoption of modularized app structures.</li>
+                    </ul>
+                </div>
+                <div class="mb-10 ml-10 timeline-item">
+                    <h3 class="text-xl font-semibold text-white">Team Lead - Android</h3>
+                    <p class="text-md font-medium text-cyan-400">M2SYS Technology, Dhaka</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">July 2022 – December 2024</time>
+                     <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Managed Android team, ensuring clean code principles.</li>
+                        <li>Architected large-scale, modularized Android applications.</li>
+                        <li>Spearheaded transition to Jetpack Compose and KMP.</li>
+                    </ul>
+                </div>
+                <div class="mb-10 ml-10 timeline-item">
+                    <h3 class="text-xl font-semibold text-white">Sr. Android Developer</h3>
+                    <p class="text-md font-medium text-cyan-400">M2SYS Technology, Dhaka</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">January 2019 – July 2022</time>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Developed and maintained secure, high-performance enterprise apps.</li>
+                        <li>Optimized application performance and user experience.</li>
+                        <li>Mentored junior developers and conducted code reviews.</li>
+                    </ul>
+                </div>
+                <div class="mb-10 ml-10 timeline-item">
+                    <h3 class="text-xl font-semibold text-white">Software Engineer - Android</h3>
+                    <p class="text-md font-medium text-cyan-400">M2SYS Technology, Dhaka</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">January 2015 – December 2018</time>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Designed and developed apps for Google Play Store.</li>
+                        <li>Integrated mobile applications with RESTful APIs.</li>
+                    </ul>
+                </div>
+                 <!-- BJIT -->
+                <div class="mb-10 ml-10 timeline-item">
+                    <h3 class="text-xl font-semibold text-white">Programmer - Android</h3>
+                    <p class="text-md font-medium text-cyan-400">BJIT Limited, Dhaka</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">February 2014 – December 2014</time>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                        <li>Received hands-on training in Android development.</li>
+                        <li>Reduced application bug rates by 60%.</li>
+                        <li>Collaborated with SourceNext (Japanese company).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-16">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white">CloudApper - No-Code Enterprise Platform</h3>
+                    <p class="text-gray-400 mt-2">A SaaS-based no-code solution for enterprise software development. Responsible for core Android functionalities and API integration.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white">Circle Care - Corporate Wellness App</h3>
+                    <p class="text-gray-400 mt-2">Provides a platform to encourage employees toward a healthier lifestyle with rewards and analytics. 150K+ downloads.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white">Patient Lens - Healthcare Solution</h3>
+                    <p class="text-gray-400 mt-2">Supporting app for RightPatient, enabling real-time patient identification, prescription tracking, and secure record management.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white">Biometric Add-ons for Android</h3>
+                    <p class="text-gray-400 mt-2">Developed SDKs for biometric devices (Watson Mini, Secugen, Hamster Pro) for secure authentication in Android apps.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="py-16">
+            <h2 class="section-title">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                     <h3 class="text-xl font-semibold text-white">Master of Science (M.Sc.)</h3>
+                     <p class="text-md text-cyan-400">Computer Science and Engineering</p>
+                     <p class="text-gray-400 mt-2">Jahangirnagar University, Bangladesh (2014)</p>
+                     <p class="text-gray-500 mt-1">CGPA: 3.52</p>
+                </div>
+                 <div class="card">
+                     <h3 class="text-xl font-semibold text-white">Bachelor of Science (B.Sc.)</h3>
+                     <p class="text-md text-cyan-400">Computer Science and Engineering</p>
+                     <p class="text-gray-400 mt-2">Jahangirnagar University, Bangladesh (2013)</p>
+                     <p class="text-gray-500 mt-1">CGPA: 3.36</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Interests -->
+        <section id="interests" class="py-16">
+            <h2 class="section-title">Additional Interests</h2>
+            <div class="card">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i data-lucide="cpu" class="w-6 h-6 mr-3 text-cyan-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white">Technology & Innovation</h4>
+                            <p class="text-gray-300">Passionate about blockchain technology, Kotlin Multiplatform, and AI-driven mobile solutions.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="trending-up" class="w-6 h-6 mr-3 text-cyan-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white">Finance & Global Economy</h4>
+                            <p class="text-gray-300">Keen interest in financial markets, economic trends, and personal finance strategies.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="heart-pulse" class="w-6 h-6 mr-3 text-cyan-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white">Personal Development & Healthy Lifestyle</h4>
+                            <p class="text-gray-300">Strong advocate for continuous learning, fitness, and maintaining work-life balance.</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <div class="experience-item">
-                <h3>Team Lead - Android</h3>
-                <p><em>M2SYS Technology, Dhaka, Bangladesh (July 2022 – December 2024)</em></p>
-                <ul>
-                    <li>Managed the Android development team, ensuring adherence to best practices and clean code principles.</li>
-                    <li>Architected large-scale Android applications, modularizing apps for scalability and extensibility.</li>
-                    <li>Spearheaded the transition to Jetpack Compose and Kotlin Multiplatform (KMP).</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Sr. Android Developer</h3>
-                <p><em>M2SYS Technology, Dhaka, Bangladesh (January 2019 – July 2022)</em></p>
-                <ul>
-                    <li>Developed and maintained enterprise applications with a focus on security and performance.</li>
-                    <li>Optimized Android applications for better performance and seamless user experience.</li>
-                    <li>Provided mentorship to junior developers and conducted regular code reviews.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Software Engineer - Android</h3>
-                <p><em>M2SYS Technology, Dhaka, Bangladesh (January 2015 – December 2018)</em></p>
-                <ul>
-                    <li>Designed and developed Android applications for the Google Play Store and company products.</li>
-                    <li>Worked closely with backend teams to integrate mobile applications with RESTful APIs.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Programmer - Android</h3>
-                <p><em>BJIT Limited, Dhaka, Bangladesh (February 2014 – December 2014)</em></p>
-                <ul>
-                    <li>Received hands-on training in Android development, resolving application bugs and improving app stability.</li>
-                    <li>Reduced application bug rates by 60% through optimized coding practices.</li>
-                    <li>Collaborated with SourceNext (Japanese company) on Android development projects.</li>
-                </ul>
-            </div>
         </section>
 
-        <section class="section">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Master of Science (M.Sc.) in Computer Science and Engineering</h3>
-                <p>Jahangirnagar University, Bangladesh (2014) | CGPA: 3.52</p>
-            </div>
-            <div class="education-item">
-                <h3>Bachelor of Science (B.Sc.) in Computer Science and Engineering</h3>
-                <p>Jahangirnagar University, Bangladesh (2013) | CGPA: 3.36</p>
-            </div>
-        </section>
+    </main>
 
-        <section class="section">
-            <h2>Projects</h2>
-            <div class="project-item">
-                <h4>CloudApper - No-Code Enterprise Platform</h4>
-                <p>A SaaS-based no-code solution for enterprise software development, enabling businesses to create applications without coding knowledge.</p>
-                <p>Responsible for developing core Android functionalities and integrating external APIs.</p>
-            </div>
-            <div class="project-item">
-                <h4>Circle Care - Corporate Wellness App</h4>
-                <p>Provides companies with a platform to encourage employees toward a healthier lifestyle.</p>
-                <p>Integrated rewards system and real-time analytics.</p>
-                 <p>Total Downloads: 150K+ (Google Play Store).</p>
-            </div>
-            <div class="project-item">
-                <h4>Patient Lens - Healthcare Solution</h4>
-                <p>Supporting app for <strong>RightPatient</strong>, enabling real-time patient identification and medical record management.</p>
-                <p>Features include prescription tracking, document uploads, and secure audio recording.</p>
-            </div>
-             <div class="project-item">
-                <h4>Biometric Add-ons for Android</h4>
-                <p>Developed SDKs for biometric devices, including <strong>Watson Mini, Secugen, Hamster Pro</strong>.</p>
-                <p>Ensured smooth integration with Android applications for secure authentication.</p>
-            </div>
-        </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 M. A. Sayem. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Built with <a href="https://tailwindcss.com" class="hover:text-cyan-400">Tailwind CSS</a> & hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+    
+    <!-- Scroll to top button -->
+    <button id="to-top-button" title="Go To Top"
+        class="hidden fixed z-50 bottom-10 right-10 p-3 border-0 w-12 h-12 rounded-full shadow-md bg-cyan-500 hover:bg-cyan-600 text-white text-lg font-semibold transition-all duration-300">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
 
-        <section class="section">
-            <h2>Additional Interests</h2>
-            <ul>
-                <li><strong>Technology & Innovation:</strong> Passionate about blockchain technology, Kotlin Multiplatform, and AI-driven mobile solutions.</li>
-                <li><strong>Finance & Global Economy:</strong> Keen interest in financial markets, economic trends, and personal finance strategies.</li>
-                <li><strong>Personal Development & Healthy Lifestyle:</strong> Strong advocate for continuous learning, fitness, and maintaining work-life balance.</li>
-            </ul>
-        </section>
-    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // Scroll to top button
+        const toTopButton = document.getElementById('to-top-button');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                toTopButton.classList.remove('hidden');
+            } else {
+                toTopButton.classList.add('hidden');
+            }
+        };
+
+        toTopButton.addEventListener("click", function(){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>
 </body>
 </html>
