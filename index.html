@@ -15,6 +15,10 @@
             background-color: #111827; /* Dark Gray */
             color: #E5E7EB; /* Light Gray */
         }
+        /* Fix for removing the blue focus line on section navigation */
+        section:focus {
+            outline: none;
+        }
         .section-title {
             @apply text-3xl font-bold text-cyan-400 mb-8 tracking-wide relative pb-2;
         }
@@ -57,6 +61,7 @@
                 <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors">Skills</a>
                 <a href="#experience" class="text-gray-300 hover:text-cyan-400 transition-colors">Experience</a>
                 <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#timeline" class="text-gray-300 hover:text-cyan-400 transition-colors">Timeline</a>
                 <a href="#education" class="text-gray-300 hover:text-cyan-400 transition-colors">Education</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white">
@@ -69,6 +74,7 @@
             <a href="#skills" class="block py-2 text-gray-300 hover:text-cyan-400">Skills</a>
             <a href="#experience" class="block py-2 text-gray-300 hover:text-cyan-400">Experience</a>
             <a href="#projects" class="block py-2 text-gray-300 hover:text-cyan-400">Projects</a>
+            <a href="#timeline" class="block py-2 text-gray-300 hover:text-cyan-400">Timeline</a>
             <a href="#education" class="block py-2 text-gray-300 hover:text-cyan-400">Education</a>
         </div>
     </header>
@@ -137,28 +143,28 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="cloud-cog" class="mr-2 text-cyan-400"></i>Web Services</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>RESTful</li>
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>SOAP</li>
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="cloud-cog" class="mr-2 text-cyan-400"></i>Web Services & Integrations</h3>
+                     <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>RESTful & SOAP</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Make.com / IFTTT</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="git-branch" class="mr-2 text-cyan-400"></i>Version Control</h3>
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="git-branch" class="mr-2 text-cyan-400"></i>DevOps & Version Control</h3>
                      <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Git</li>
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>SVN</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Git / SVN</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>GitLab CI/CD</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Fastlane</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-white mb-4 flex items-center"><i data-lucide="wrench" class="mr-2 text-cyan-400"></i>Tools & Frameworks</h3>
                      <ul class="space-y-2 text-gray-300">
                         <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Retrofit & Volley</li>
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Glide</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Glide & Picasso</li>
                         <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Room</li>
                         <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Coroutine</li>
                         <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Jetpack Libraries</li>
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-cyan-400"></i>Fastlane</li>
                     </ul>
                 </div>
             </div>
@@ -170,14 +176,13 @@
             <div class="relative border-l-2 border-gray-700 ml-5">
                 <!-- M2SYS -->
                 <div class="mb-10 ml-10 timeline-item">
-                    <span class="absolute -left-1.5 flex items-center justify-center w-3 h-3 bg-cyan-400 rounded-full ring-8 ring-gray-900"></span>
                     <h3 class="text-xl font-semibold text-white">Mobile Team Lead</h3>
                     <p class="text-md font-medium text-cyan-400">M2SYS Technology, Dhaka</p>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400">January 2025 – Present</time>
                     <ul class="list-disc list-inside text-gray-300 space-y-1">
-                        <li>Leading international Android & iOS teams.</li>
-                        <li>Managing inter-team communication and project architecture.</li>
-                        <li>Driving adoption of modularized app structures.</li>
+                        <li>Leading integration efforts with platforms like Make.com, developing .NET connectors and APIs.</li>
+                        <li>Assisting with junior DevOps tasks to deliver critical backend features.</li>
+                        <li>Overseeing international team recruitment in Turkey, enhancing interview skills and cross-cultural understanding.</li>
                     </ul>
                 </div>
                 <div class="mb-10 ml-10 timeline-item">
@@ -185,9 +190,10 @@
                     <p class="text-md font-medium text-cyan-400">M2SYS Technology, Dhaka</p>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400">July 2022 – December 2024</time>
                      <ul class="list-disc list-inside text-gray-300 space-y-1">
-                        <li>Managed Android team, ensuring clean code principles.</li>
-                        <li>Architected large-scale, modularized Android applications.</li>
-                        <li>Spearheaded transition to Jetpack Compose and KMP.</li>
+                        <li>Led the adoption of Google M3 design, migration to Jetpack Compose, and Dagger to Hilt.</li>
+                        <li>Implemented a modular architecture with CI/CD using Fastlane and GitLab pipelines.</li>
+                        <li>Managed international teams, requirement analysis, and planning for app development.</li>
+                        <li>Deepened understanding of the entire product backbone, improving app architecture and design.</li>
                     </ul>
                 </div>
                 <div class="mb-10 ml-10 timeline-item">
@@ -195,9 +201,10 @@
                     <p class="text-md font-medium text-cyan-400">M2SYS Technology, Dhaka</p>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400">January 2019 – July 2022</time>
                     <ul class="list-disc list-inside text-gray-300 space-y-1">
-                        <li>Developed and maintained secure, high-performance enterprise apps.</li>
-                        <li>Optimized application performance and user experience.</li>
-                        <li>Mentored junior developers and conducted code reviews.</li>
+                        <li>Mentored junior developers, initiating a journey of leadership and team guidance.</li>
+                        <li>Introduced a business domain layer to the MVVM architecture to manage growing product complexity.</li>
+                        <li>Led the development of the CloudApper no-code platform using a modern tech stack (Kotlin, Coroutines, Dagger, Room).</li>
+                        <li>Evolved the CircleCare app with corporate wellness features and migrated legacy Java code to Kotlin.</li>
                     </ul>
                 </div>
                 <div class="mb-10 ml-10 timeline-item">
@@ -205,8 +212,9 @@
                     <p class="text-md font-medium text-cyan-400">M2SYS Technology, Dhaka</p>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400">January 2015 – December 2018</time>
                     <ul class="list-disc list-inside text-gray-300 space-y-1">
-                        <li>Designed and developed apps for Google Play Store.</li>
-                        <li>Integrated mobile applications with RESTful APIs.</li>
+                        <li>Developed the "CircleCare" application from scratch using Java, Volley, and custom views.</li>
+                        <li>Implemented core features including health tracking modules and secure social circles using AES/RSA encryption.</li>
+                        <li>Created custom network managers and utilized RecyclerView for smooth, dynamic list layouts.</li>
                     </ul>
                 </div>
                  <!-- BJIT -->
@@ -215,9 +223,8 @@
                     <p class="text-md font-medium text-cyan-400">BJIT Limited, Dhaka</p>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400">February 2014 – December 2014</time>
                     <ul class="list-disc list-inside text-gray-300 space-y-1">
-                        <li>Received hands-on training in Android development.</li>
-                        <li>Reduced application bug rates by 60%.</li>
-                        <li>Collaborated with SourceNext (Japanese company).</li>
+                        <li>Maintained and fixed bugs for SourceNext products like "Super Battery" and "Super Speed".</li>
+                        <li>Honed fundamental Android and debugging skills, contributing to a 60% reduction in reported issues.</li>
                     </ul>
                 </div>
             </div>
@@ -226,7 +233,7 @@
         <!-- Projects -->
         <section id="projects" class="py-16">
             <h2 class="section-title">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card">
                     <h3 class="text-xl font-semibold text-white">CloudApper - No-Code Enterprise Platform</h3>
                     <p class="text-gray-400 mt-2">A SaaS-based no-code solution for enterprise software development. Responsible for core Android functionalities and API integration.</p>
@@ -243,6 +250,71 @@
                     <h3 class="text-xl font-semibold text-white">Biometric Add-ons for Android</h3>
                     <p class="text-gray-400 mt-2">Developed SDKs for biometric devices (Watson Mini, Secugen, Hamster Pro) for secure authentication in Android apps.</p>
                 </div>
+                 <div class="card">
+                    <h3 class="text-xl font-semibold text-white">Super Battery</h3>
+                    <p class="text-gray-400 mt-2">Maintained and improved an application providing smart features and options to minimize battery usage on Android devices for SourceNext.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-white">Super Speed</h3>
+                    <p class="text-gray-400 mt-2">Maintained and debugged an application designed to boost phone speed by managing running applications and clearing memory for SourceNext.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline" class="py-16">
+            <h2 class="section-title">Career Timeline</h2>
+            <div class="relative border-l-2 border-gray-700 ml-5">
+                <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">Q2 2025</time>
+                    <h3 class="text-xl font-semibold text-white">System Integration & Team Growth</h3>
+                    <p class="mt-1 text-gray-300">Focused on system integration, creating custom CloudApper apps in Make.com and exploring other automation platforms. Assisted with junior DevOps tasks and helped deliver critical backend features. Honed interviewing skills by recruiting for our international team in Turkey.</p>
+                </div>
+                 <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">Q1 2025</time>
+                    <h3 class="text-xl font-semibold text-white">Backend & API Development</h3>
+                    <p class="mt-1 text-gray-300">Shifted focus to the integration side of CloudApper, developing several connectors using C# and .NET. Wrote, optimized, and released backend APIs to support new functionalities.</p>
+                </div>
+                <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">2024</time>
+                    <h3 class="text-xl font-semibold text-white">UI/UX Modernization & Architectural Refinement</h3>
+                    <p class="mt-1 text-gray-300">Led the adoption of Google's Material 3 design guidelines and migrated legacy XML layouts to Jetpack Compose. Upgraded dependency injection from Dagger to Hilt. Enhanced cross-team communication, especially with the backend team, to better architect the app and understand the entire product backbone.</p>
+                </div>
+                <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">2023</time>
+                    <h3 class="text-xl font-semibold text-white">Modular Architecture & Continuous Delivery</h3>
+                    <p class="mt-1 text-gray-300">Architected and led the transition to a fully modularized app structure for the flagship product, significantly reducing build times. Focused on Continuous Delivery, using Fastlane and GitLab pipelines to release modules as independent libraries.</p>
+                </div>
+                 <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">2022</time>
+                    <h3 class="text-xl font-semibold text-white">International Team Collaboration</h3>
+                    <p class="mt-1 text-gray-300">Focused on requirement analysis, planning, and active development while working closely with an international team situated in Turkey, navigating cross-cultural communication and workflows.</p>
+                </div>
+                 <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">2021</time>
+                    <h3 class="text-xl font-semibold text-white">Mentorship & Advanced Architecture</h3>
+                    <p class="mt-1 text-gray-300">Began my journey into mentorship and leadership by guiding junior developers. Focused on clean architecture and code, introducing a business domain layer to our MVVM structure to handle growing product complexity. Implemented an OAuth 2.0 login system for CloudApper.</p>
+                </div>
+                <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">2020</time>
+                    <h3 class="text-xl font-semibold text-white">Building a No-Code Platform</h3>
+                    <p class="mt-1 text-gray-300">Started work on the new "CloudApper" no-code platform. Established a strong architectural foundation using a modern tech stack: Kotlin, Coroutines, MVVM, Retrofit, Room, and Dagger for dependency injection.</p>
+                </div>
+                <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">2018 - 2020</time>
+                    <h3 class="text-xl font-semibold text-white">Evolving CircleCare for Corporate Wellness</h3>
+                    <p class="mt-1 text-gray-300">Continued development on CircleCare, shifting focus to corporate wellness. Developed modules for company-wide competitions, a rewards system, and an admin dashboard for monitoring employee wellness data. Continuously updated the project architecture and migrated significant portions of the codebase from Java to Kotlin.</p>
+                </div>
+                <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">2015 - 2018</time>
+                    <h3 class="text-xl font-semibold text-white">Foundational App Development</h3>
+                    <p class="mt-1 text-gray-300">Developed the "CircleCare" app from scratch. Utilized Volley for networking (later Glide for images), created custom views with overridden touch events, and built a custom network manager. Implemented health modules and a private social circle with AES/RSA encryption for security. Primarily worked in Java with AsyncTask for threading.</p>
+                </div>
+                 <div class="mb-10 ml-10 timeline-item">
+                    <time class="mb-1 text-lg font-bold text-cyan-400">2014</time>
+                    <h3 class="text-xl font-semibold text-white">Entry into Android Development</h3>
+                    <p class="mt-1 text-gray-300">Completed Android training at BJIT Ltd, finishing in the top 3. Worked on maintaining and debugging existing SourceNext products ("Super Battery", "Super Speed"), learning to fix issues effectively and reducing bug generation by nearly 60%.</p>
+                </div>
             </div>
         </section>
 
@@ -254,13 +326,11 @@
                      <h3 class="text-xl font-semibold text-white">Master of Science (M.Sc.)</h3>
                      <p class="text-md text-cyan-400">Computer Science and Engineering</p>
                      <p class="text-gray-400 mt-2">Jahangirnagar University, Bangladesh (2014)</p>
-                     <p class="text-gray-500 mt-1">CGPA: 3.52</p>
                 </div>
                  <div class="card">
                      <h3 class="text-xl font-semibold text-white">Bachelor of Science (B.Sc.)</h3>
                      <p class="text-md text-cyan-400">Computer Science and Engineering</p>
                      <p class="text-gray-400 mt-2">Jahangirnagar University, Bangladesh (2013)</p>
-                     <p class="text-gray-500 mt-1">CGPA: 3.36</p>
                 </div>
             </div>
         </section>
